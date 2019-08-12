@@ -122,7 +122,28 @@ void	Discards a return value of an expression.
 //working example of unary operator
 var fName = 'Chukwunonso';
 var lName = 'Eweni';
+var sum = 0;
+var myArray = [2,4,6,7,8,5];
 console.log(fName + ' '+ lName);// operator (+) is used for concatenation
+console.log(5-3);//operator (-) is used for arithmetic operation
+console.log(3 !== '3');//operator (!) is used for boolean operation
+console.log(sum++);//increments the value of sum by 1 therefore sum = 1
+console.log(sum--);//decrements the value of sum by 1 therefore sum = 0
+console.log(typeof ('value'));//operator (typeof) is used for check/print the type of variable prints string
+console.log(delete(myArray[3]));// operator delete removes the value in myArray at position 3 and prints [2,4,6,8,5]
+console.log(5 & 13); // 0101 & 1101 = 0101, expected output: 5;
+void function test() {
+  console.log('boo!');
+  // expected output: "boo!"
+}();
+
+try {
+  test();
+}
+catch(e) {
+  console.log(e);
+  // expected output: ReferenceError: test is not defined
+}
 
 //working example of ternary operator
 // The conditional (ternary) operator is the only JavaScript operator that takes three operands. 
@@ -141,3 +162,28 @@ console.log(getFee(false));
 console.log(getFee(1));
 // expected output: "$2.00"
 
+/*COMPARISON OPERATORS
+JavaScript has both strict and type–converting comparisons. 
+A strict comparison (e.g., ===) is only true if the operands are of the same type and the contents match. 
+The more commonly-used abstract comparison (e.g. ==) converts the operands to the same type before making 
+the comparison. For relational abstract comparisons (e.g., <=), the operands are first converted to primitives, 
+then to the same type, before comparison.
+
+EXAMPLES
+*/console.log(1 == 1);
+// expected output: true
+
+console.log("1" == 1);
+// expected output: true
+
+console.log(1 === 1);
+// expected output: true
+
+console.log("1" === 1);
+// expected output: false
+3 === 3   // true
+3 === '3' // false
+var object1 = {'key': 'value'}, object2 = {'key': 'value'};
+object1 === object2 //false
+4 >= 3 // true
+3 >= 3 // true

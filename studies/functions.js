@@ -77,3 +77,8 @@ function init() {
   displayName();
 }
 init();
+
+// A function is defined by its return statement. A function can work without parameters/arguments
+//if it is assigned to a variable eg var animal = function(){};
+//A function can still work without a return statement if its console.logged or related action
+//is performed inside the function 
